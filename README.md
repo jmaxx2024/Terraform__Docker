@@ -1,10 +1,12 @@
 # Desplegacion en entorno DEV con Terraform + Docker
 
 ## Integrantes G11:
-- Maximiliano Villanueva, Jhon
-- 
-- 
-- 
+
+- MAXIMILIANO VILLANUEVA JHON
+- TERRONES ALAYO, MAURICIO FABIAN
+- RIOS TAMAYO, MARVIN
+- VILLAJULCA QUISPE, DIEGO ALONSO
+- BENJAMIN REYES, LUIS
 
 Este repositorio contiene la configuración de infraestructura como código (IaC) para desplegar un entorno de desarrollo (DEV) utilizando Terraform y Docker.
 
