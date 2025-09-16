@@ -7,6 +7,30 @@ terraform {
   }
 }
 
+output "nginx_app1" {
+  value = "http://localhost:8081"
+}
+
+output "nginx_app2" {
+  value = "http://localhost:8082"
+}
+
+output "nginx_app3" {
+  value = "http://localhost:8083"
+}
+
+output "grafana" {
+  value = "http://localhost:3000 (user: admin, pass: admin)"
+}
+
+output "postgres" {
+  value = "postgres://postgres:contrasena123456@localhost:5432"
+}
+
+output "redis" {
+  value = "redis://localhost:6379"
+}
+
 provider "docker" {
 }
 
