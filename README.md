@@ -41,7 +41,7 @@ Antes de comenzar, asegúrate de tener:
 ## 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/jmaxx2024/Terraform__Docker.git)
+git clone https://github.com/jmaxx2024/Terraform__Docker.git
 cd Terraform__Docker
 ```
 
@@ -72,27 +72,62 @@ terraform destroy
 ```
 
 ## 6. Acceder a los servicios
-- Grafana: http://localhost:3000
-- Usuario_Grafana: ```admin``` | Password: ```admin```
-- Apps: disponibles en los puertos configurados en ```apps.tf```
 
-# 🧹 Destruir el entorno
+# Accede a Grafana
+En tu navegador:
+```bas
+hhttp://localhost:3000
+```
+
+Usuario/contraseña por defecto:
+
+user: admin
+
+password: admin
+
+Al entrar, Grafana te pedirá cambiar la contraseña, sigue el proceso.
+
+# Verifica los contenedores activos
+```bash
+docker ps
+```
+
+# Accede a NGINX
+```bash
+http://localhost:8081
+
+http://localhost:8082
+
+http://localhost:8083
+```
+
+# Accede a PostgreSQL
+
+Conéctate usando un cliente, ejemplo: psql o DBeaver en:
+
+Host: localhost
+
+Puerto: 5432
+
+Usuario: postgres
+
+Contraseña: contrasena123456
+
+# Accede a Redis
+
+  Es necesario que tengas instalado el CLI de Redis y ejecuta
+
+```bash
+redis-cli -h localhost -p 6379
+```
+
+# Destruir el entorno
 Cuando ya no necesites el entorno de desarrollo, simplemente ejecuta:
 
 ```bash
 terraform destroy -auto-approve
 ```
 
-# 📝 Convenciones de commits
-Este proyecto sigue la Conventional Commits para mantener un historial limpio:
-- ```feat:``` ➝ Nueva funcionalidad (ej: ```feat(apps): agregar App1 conectada a PostgreSQL```)
-- ```fix:``` ➝ Corrección de errores
-- ```chore:``` ➝ Cambios menores o mantenimiento
-- ```docs:``` ➝ Documentación
-- ```refactor:``` ➝ Refactorización de código sin cambio funcional
-- ```style:``` ➝ Cambios de formato (no afectan lógica)
-- ```test:``` ➝ Añadir o modificar pruebas
-
-# 📌 Arquitectura
+# Arquitectura del despliegue
 La siguiente imagen representa la arquitectura del entorno desplegado:
 <img width="772" height="575" alt="Image" src="https://github.com/user-attachments/assets/341f6b2d-ef8b-4810-be49-4ecda438403a" />
